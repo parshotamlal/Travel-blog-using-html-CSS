@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease;
+}
+header h2 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+header .tagline {
+    font-size: 1.5em;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+nav ul li a:hover {
+    color: #4facfe;
+    text-decoration: underline;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #4facfe;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Section Styles */
+section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+ul {
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-me p {
+    line-height: 1.8;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px;
+    text-align: center;
+}
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contact form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+button {
+    padding: 15px 30px;
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+button:hover {
+    background-color: #007BFF;
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(0.98);
+}
+
+/* Contact Info Section */
+.contact-info {
+    text-align: center;
+    padding: 20px;
+}
+.contact-info a {
+    color: #4facfe;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 2em;
+    }
+    header .tagline {
+        font-size: 1.2em;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #4facfe;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #007BFF;
+}
