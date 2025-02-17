@@ -6,66 +6,56 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
 body {
-    background-color: #d4cece;
+    background-color: #f8f8f8;
     color: #333;
-    line-height: 1.6;
-}
-
-/* Header */
-header.top {
-    background: linear-gradient(rgba(28, 110, 211, 0.6), rgba(0, 0, 0, 0.6)), url('header-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: rgb(243, 241, 241);
-    animation: floatHeader 2s infinite alternate ease-in-out;
-}
-
+    cursor:pointer;
+    line-height: 1.7;
+    }
+    header.top {
+        background: linear-gradient(rgb(9, 166, 245),rgba(0,0,0,6));
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(243,241,241);
+        animation:floatHeader 2s infinite alternate ease-in-out;
+    }
 header h2 {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    animation: fadeIn 2s ease-in;
+    animation: fadeln 2s ease-in;
 }
-
-/* Floating Header Animation */
 @keyframes floatHeader {
     from {
         transform: translateY(0);
     }
-    to {
-        transform: translateY(-10px);
+    to{
+        transform: translateY(-15px);
     }
 }
-
-/* Fade In Effect */
-@keyframes fadeIn {
+@keyframes fadeln {
     from {
         opacity: 0;
     }
     to {
-        opacity: 1;
+        opacity: 4;
     }
 }
-
-/* Navigation */
+/*NAVIGATION */
 nav {
     position: sticky;
     top: 0;
-    background: #333;
     padding: 10px 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: #7b81e9;
+    box-shadow: 0px 4px 10px rgba(197,162,162,0.3);
     z-index: 1000;
-    animation: slideDown 1s ease-in-out;
+    animation: slideDown 2s ease-in-out;
 }
-
-/* Slide Down Navigation Animation */
 @keyframes slideDown {
     from {
         transform: translateY(-50px);
@@ -75,39 +65,37 @@ nav {
         transform: translateY(0);
         opacity: 1;
     }
+    
 }
-
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-}
 
+}
 nav ul li {
-    margin: 0 20px;
+    margin: 0 20px;    
 }
-
 nav ul li a {
     text-decoration: none;
+    transition: color 0.4s;
     color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+    font-size: 1.3rem;
+    transition: color 0.4s;
 }
-
 nav ul li a:hover {
-    color: #ff9800;
+    color: #1970c1;
+    transform: scale(2.10);
+   
 }
-
-/* Sections */
 section {
     padding: 80px 10%;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 1s ease-in-out forwards;
+    animation: fadelnUp 1s ease-in-out forwards;
 }
 
-/* Fade In Up Animation */
-@keyframes fadeInUp {
+@keyframes fadelnUp {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -115,83 +103,33 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
 
+    }
+
+}
 section h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom: 20px;
+    border-left: 6px solid #ff9800;
     text-transform: uppercase;
-    border-left: 5px solid #ff9800;
     padding-left: 10px;
 }
 
-/* Images */
 .img {
-    width: 100%;
+    width: 90%;
     max-height: 500px;
-    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
-
 .img:hover {
     transform: scale(1.05);
 }
 
-/* Video Section */
 .video iframe {
-    width: 100%;
+    width: 90%;
     height: 400px;
+    margin-top: 20px;
     border-radius: 10px;
-    margin-top: 20px;
 }
-
-/* Buttons */
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ff9800;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    animation: bounce 2s infinite;
-}
-
-/* Button Bounce Effect */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-button:hover {
-    background: #e68900;
-    transform: scale(1.1);
-}
-
-/* Contact Form */
-.contact-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
