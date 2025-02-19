@@ -1,4 +1,3 @@
-/* Global Style
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 /* Global Styles */
@@ -53,7 +52,7 @@ header h2 {
 nav {
     position: sticky;
     top: 0;
-    padding: 10px 0;
+    
     background: #7b81e9;
     box-shadow: 0px 4px 10px rgba(197,162,162,0.3);
     z-index: 1000;
@@ -110,7 +109,7 @@ section {
     }
 
 }
-section h1 {
+section h1  {
     font-size: 2.4rem;
     margin-bottom: 20px;
     border-left: 6px solid #ff9800;
@@ -136,22 +135,7 @@ section h1 {
     margin-top: 20px;
     border-radius: 10px;
 }
-.content4 {
-    
-    padding: 80px 10%;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadelnUp 1s ease-in-out forwards;
-}
-.content4 img {
-    width: 100%;
-    max-height: 500px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-}
+
 .text {
     height: 60px;
 }
@@ -188,47 +172,58 @@ button:hover {
     border-radius: 4%;
 }
 .footer {
-    width: 100%;
-    height: 13vh;
+    width: fit-content;
+    min-width: 100%;
+    height: 40px;
     background: #222;
     color: white;
+    display: flex;
     align-items: center;
-    align-content: center;
-    text-align: center
-    ;
-}
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9rem;+
 
 
 
-  /* PC (Large screens) */
-  @media (min-width: 1024px) {
-    .container {
-        flex-direction: row;
-    }
-    .main {
-        flex: 2;
-    }
-    .sidebar {
-        flex: 1;
-    }
-}
+/* Responsive Design */
 
-/* Tablet */
-@media (max-width: 1023px) and (min-width: 768px) {
-    .container {
-        flex-direction: row;
+/* Tablets */
+@media (max-width: 1024px) { 
+    header h2 {
+        font-size: 2.5rem;
     }
-    .main, .sidebar {
-        flex: 1;
-    }
-}
-
-/* Phone */
-@media (max-width: 767px) {
-    .container {
+    nav ul {
         flex-direction: column;
+        align-items: center;
+
     }
-    .main, .sidebar {
-        width: 100%;
+    nav ul li {
+        margin: 10px 0;
+    }
+    .video iframe {
+        height: 300px;
+    }
+}
+/* Mobile Phones */
+@media (max-width: 768px) { 
+    header.top {
+        height: 50vh;
+    }
+    header h2 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 50px 5%;
+    }
+    .img {
+        max-height: 300px;
+    }
+    .video iframe {
+        height: 250px;
+    }
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
