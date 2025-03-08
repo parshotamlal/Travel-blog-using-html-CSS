@@ -1,6 +1,6 @@
-/* Google Fonts */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +14,13 @@ body {
     cursor:pointer;
     line-height: 1.7;
     }
-    header.top {
+
+/* Header */
+header.top {
         background: linear-gradient(rgb(9, 166, 245),rgba(0,0,0,6));
         background-size: cover;
         background-position: center;
-        height: 75vh;
+        height: 70vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,12 +28,16 @@ body {
         color: rgb(243,241,241);
         animation:floatHeader 2s infinite alternate ease-in-out;
     }
+
+/* Header h2 */
 header h2 {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     animation: fadeln 2s ease-in;
 }
+
+/* Header Animation */
 @keyframes floatHeader {
     from {
         transform: translateY(0);
@@ -48,16 +54,18 @@ header h2 {
         opacity: 4;
     }
 }
-/*NAVIGATION */
+
+/* Navigation Bar */
 nav {
     position: sticky;
     top: 0;
-    
     background: #7b81e9;
     box-shadow: 0px 4px 10px rgba(197,162,162,0.3);
     z-index: 1000;
     animation: slideDown 2s ease-in-out;
 }
+
+/* Slide Down Animation for Navbar */
 @keyframes slideDown {
     from {
         transform: translateY(-50px);
@@ -69,15 +77,20 @@ nav {
     }
     
 }
+
+/* Navbar List */
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-
 }
+
+/* Navbar List Items */
 nav ul li {
     margin: 0 20px;    
 }
+
+/* Navbar Links */
 nav ul li a {
     text-decoration: none;
     transition: color 0.4s;
@@ -85,18 +98,23 @@ nav ul li a {
     font-size: 1.3rem;
     transition: color 0.4s;
 }
+
+/* Navbar Link Hover Effect */
 nav ul li a:hover {
     color: #1970c1;
     transform: scale(2.10);
    
 }
+
+/* Section Styles */
 section {
-    padding: 80px 10%;
+    padding: 20px 10%;
     opacity: 0;
     transform: translateY(20px);
     animation: fadelnUp 1s ease-in-out forwards;
 }
 
+/* Section Fade-in Animation */
 @keyframes fadelnUp {
     from {
         opacity: 0;
@@ -109,26 +127,36 @@ section {
     }
 
 }
+
+/* Section Headings */
 section h1  {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     margin-bottom: 20px;
     border-left: 6px solid #ff9800;
     text-transform: uppercase;
     padding-left: 10px;
 }
 
+
+/* Image Styles */
 .img {
-    width: 100%;
+    width: 90%;
     max-height: 500px;
     border-radius: 10px;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
+
+/* Image Hover Effect */
 .img:hover {
     transform: scale(1.05);
 }
+p {
+    font-size: 1.2rem;
+}
 
+/* Video Styles */
 .video iframe {
     width: 90%;
     height: 400px;
@@ -140,6 +168,7 @@ section h1  {
     height: 60px;
 }
 
+/* Button Styles */
 button {
     display: inline-block;
     background: #ff9800;
@@ -152,6 +181,8 @@ button {
     transition: background 0.2s,transfrom 0.3s;
     animation: bounce 1s infinite;
 }
+
+/* Button Bounce Animation */
 @keyframes bounce {
     0% 100% {
         transform:translateY(0)
@@ -160,17 +191,23 @@ button {
     }
     }
 }
+
+/* Button Hover Effect */
 button:hover {
     background: #e68900;
     transform: scale(1.2);
 }
+
+/* Contact Form */
 .contact-from input {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ddd;
     margin: 10px 0;
     border-radius: 4%;
 }
+
+/* Footer Styles */
 .footer {
     width: fit-content;
     min-width: 100%;
@@ -183,47 +220,82 @@ button:hover {
     text-align: center;
     padding: 5px;
     font-size: 0.9rem;+
-
+}
 
 
 /* Responsive Design */
 
-/* Tablets */
-@media (max-width: 1024px) { 
-    header h2 {
-        font-size: 2.5rem;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-    .video iframe {
-        height: 300px;
-    }
-}
 /* Mobile Phones */
-@media (max-width: 768px) { 
+@media (max-width: 750px) { 
     header.top {
-        height: 50vh;
+        height: 55vh;
     }
     header h2 {
         font-size: 2rem;
     }
     section {
-        padding: 50px 5%;
+        padding: 60px 5%;
     }
     .img {
-        max-height: 300px;
+        max-height: 250px;
     }
     .video iframe {
         height: 250px;
     }
     button {
         padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    nav ul {
+        flex-direction: row; 
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    nav ul li a {
+        font-size: 0.8rem;
+        justify-content: space-between;
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+    
+/* Tablets  */
+@media (min-width: 750px) and (max-width: 1024px) { 
+    header.top {
+        height: 55vh;
+    }
+    header h2 {
+        font-size: 2.3rem;
+    }
+    section {
+        padding: 70px 6%;
+    }
+    .img {
+        max-height: 280px;
+    }
+    .video iframe {
+        height: 280px;
+    }
+  
+    nav {
+        padding: 18px 0; 
+    }
+    nav ul {
+        flex-direction: row; 
+        align-items: center;
+        text-align: center;
+        gap: 12px; 
+    }
+    nav ul li a {
         font-size: 0.8rem;
     }
+    nav ul li {
+        margin: 9px 0;
+    }
+
+button {
+    padding: 9px 18px;
+    font-size: 0.95rem;
+}
 }
